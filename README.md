@@ -75,14 +75,14 @@ define service {
 
 #### Check Percentage of Open Connections
 
-This is a test that will check the percentage of free connections left on the Mongo server. In the following example it will send out an warning if the connection pool is 70% used and a critical error if it is 80% used. 
+This is a test that will check the percentage of free connections left on the Mongo server. In the following example it will send out an warning if the connection pool is 80% used and a critical error if it is 90% used. 
 
 <pre><code>
 define service {
     use                 generic-service
     hostgroup_name          Mongo Servers
     service_description     Mongo Free Connections
-    check_command           check_mongodb!connections!27017!70!80
+    check_command           check_mongodb!connections!27017!80!90
 }
 </code></pre>
 
